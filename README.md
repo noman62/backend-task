@@ -16,10 +16,10 @@
 ##### 3.Install dependencies:
 ##### npm install
 ##### 4.Configure the environment variables:
- ###### Create a .env file in the root directory.
- ###### Specify the following environment variables:
-  ###### DB_CONNECTION_STRING: Connection string for your MongoDB database.
-  ###### JWT_SECRET: Secret key for JWT token generation.
+###### Create a .env file in the root directory.
+###### Specify the following environment variables:
+###### DB_CONNECTION_STRING: Connection string for your MongoDB database.
+###### JWT_SECRET: Secret key for JWT token generation.
 ##### 5.Start the development server:
 ##### npm start
 ##### The server will start running at http://localhost:8000.
