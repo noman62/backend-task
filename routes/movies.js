@@ -9,7 +9,7 @@ const { addMovie, allMovie, singleMovie } = require('../controllers/movies');
 
 
 // Routes
-router.post('/addMovie',authenticateToken, addMovie);
+router.post('/addMovie', authenticateToken, addMovie);
 router.get('/allMovie', allMovie);
 router.get('/movie/:id', singleMovie);
 

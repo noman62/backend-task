@@ -11,8 +11,8 @@ const authenticateToken = (req, res, next) => {
       }
 
       req.userId = user.userId;
-      req.role =user.role;
-      req.user=user;
+      req.role = user.role;
+      req.user = user;
       next();
     });
   } else {

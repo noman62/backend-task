@@ -2,12 +2,12 @@ import Movie from "../models/movies"
 
 //Add Movie
 export const addMovie = async (req, res) => {
-    
+
     try {
-   
+
         if (req.role && req.role !== 'admin') {
             return res.status(403).json({ message: 'Not authorized' });
-          }
+        }
 
         // Save movie in database
         const newMovie = new Movie(req.body)
@@ -29,7 +29,7 @@ export const allMovie = async (req, res) => {
 }
 
 //get a single Movie
-export const singleMovie= async (req, res) => {
+export const singleMovie = async (req, res) => {
     try {
         const movieId = req.params.id;
 
@@ -48,5 +48,4 @@ export const singleMovie= async (req, res) => {
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
-
 }
