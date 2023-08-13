@@ -25,3 +25,4 @@
 ##### The server will start running at http://localhost:8000.
 ### Security Implementations
 ##### This project implements stateless authentication using JWT (JSON Web Tokens) and stores the tokens in cookies for authentication. The API endpoints require a valid JWT token to access protected routes. Users can authenticate by sending their credentials and receiving a JWT token, which they can include in subsequent requests in the Authorization header as a Bearer token.
+### Live site- https://movie-tvshowapi.onrender.com/api/
