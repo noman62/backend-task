@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 //User Registration
 export const register = async (req, res) => {
   try {
-    const { name, email, password } = req.body
+    const { name, email, password,phoneNumber } = req.body
 
     // Name validation
     if (!name) return res.status(400).send('Name is required')
@@ -32,7 +32,8 @@ export const register = async (req, res) => {
     const user = new User({
       name,
       email,
-      password: hashedPassword
+      password: hashedPassword,
+      phoneNumber
     })
     await user.save().then(newUser => {
       console.log('New User----->', newUser)
@@ -68,7 +69,7 @@ export const login = async (req, res) => {
     // Set the token as a cookie
     res.cookie('token', token, { httpOnly: true });
 
-    res.status(200).json({ message: 'User logged in successfully', token, user });
+    res.status(200).json(user);
 
 
   } catch (err) {

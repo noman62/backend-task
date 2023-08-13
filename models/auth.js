@@ -20,6 +20,10 @@ const userSchema = new Schema(
       min: 6,
       max: 64,
     },
+    phoneNumber: {
+      type: String, // Change this to the appropriate type for phone numbers
+      trim: true,
+    },
     role: {
       type: String,
       enum: ['user', 'admin', 'guest'],
